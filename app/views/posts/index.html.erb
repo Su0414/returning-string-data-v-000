@@ -7,7 +7,6 @@ $(function () {
   $(".js-more").on('click', function() {
     var id = $(this).data("id");
     $.get("/posts/" + id + "/body", function(data) {
-      alert(id);
       // Replace text of body-id div
       $("#body-" + id).text(data);
     });
